@@ -1,0 +1,59 @@
+.dishContainer {
+  width: 100%;
+  padding: 10px 0;
+}
+.menuCard {
+  width: 100%;
+}
+.subMenuCard,
+.viewAll {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.subMenuCard h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #2a2b3c;
+}
+.subMenuCard .viewAll p {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--goldenrod);
+}
+.subMenuCard .viewAll i {
+  display: flex;
+  background: var(--goldenrod);
+  width: 20px;
+  height: 20px;
+  min-width: 20px;
+  border-radius: 5px;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+}
+.subMenuCard .viewAll i .MuiSvgIcon-root {
+  font-size: 16px;
+  color: #faf9fb;
+}
+
+.rowContainer {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  margin: 10px 0;
+  padding: 10px 0;
+}
+.rowContainer::-webkit-scrollbar {
+  display: none;
+}
+
+.dishItemContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}

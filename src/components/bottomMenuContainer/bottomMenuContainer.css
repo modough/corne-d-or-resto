@@ -1,0 +1,35 @@
+.bottomMenuLi {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  z-index: 1;
+}
+.bottomMenuLi a {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  flex-direction: column;
+  text-align: center;
+  font-weight: 500;
+}
+.bottomMenuLi a .icon {
+  position: relative;
+  display: block;
+  transition: 0.5s;
+  text-align: center;
+  line-height: 70px;
+}
+
+.bottomMenuLi a .icon .MuiSvgIcon-root {
+  font-size: 26px;
+  color: #373848;
+}
+.bottomMenuLi.active a .icon {
+  transform: translateY(-26px);
+}
+.bottomMenuLi.active a .icon .MuiSvgIcon-root {
+  color: #faf9fb;
+  transition: 0.5s;
+}

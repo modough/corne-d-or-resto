@@ -1,0 +1,35 @@
+.bannerContent {
+  padding: 8px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+}
+.bannerContent h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #2a2b3c;
+}
+.bannerContent p {
+  width: 200px;
+  font-size: 14px;
+  color: #2a2b3c;
+  margin: 5px 0 20px 0;
+}
+.bannerContent p span {
+  font-weight: 800;
+  color: black;
+}
+.bannerContent a {
+  padding: 5px 15px;
+  background: var(--goldenrod);
+  border-radius: 100vw;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.bannerContent a:hover {
+  box-shadow: var(--box-shadowBanner);
+  transition: 0.5s;
+}
