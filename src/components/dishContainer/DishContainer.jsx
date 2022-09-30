@@ -4,7 +4,14 @@ import "./dishContainer.css";
 import { MenuItems } from "../data/Data";
 import ItemCard from "../itemCard/ItemCard";
 
-const DishContainer = ({ name }) => {
+import { Items } from "../data/Data";
+
+const DishContainer = ({ name, setIsMainData, isMainData }) => {
+  // filter categories
+  const setData = (itemId) => {
+    setIsMainData(Items.filter((elm) => elm.itemId === itemId));
+  };
+
   return (
     <div className="dishContainer">
       <div className="menuCard">
@@ -20,24 +27,28 @@ const DishContainer = ({ name }) => {
       </div>
       <div className="rowContainer">
         {MenuItems &&
-          MenuItems.map((menuItem) => (
-            <Card
-              imgSrc={menuItem.imgSrc}
-              name={menuItem.name}
-              key={menuItem.id}
-              isActive={menuItem.id === 1 ? true : false}
-            />
+          MenuItems.map((data) => (
+            <div onClick={() => setData(data.itemId)} key={data.id}>
+              <Card
+                imgSrc={data.imgSrc}
+                name={data.name}
+                isActive={data.id === 1 ? true : false}
+              />
+            </div>
           ))}
       </div>
       <div className="dishItemContainer">
-        <ItemCard
-          imgSrc={
-            "https://firebasestorage.googleapis.com/v0/b/food-delivery-37c59.appspot.com/o/Images%2Fburger1.png?alt=media&token=319dfbe9-462b-46ea-8f38-6ca7a20319e0"
-          }
-          ratings={5}
-          name={"Burger Bistro"}
-          price={"2500"}
-        />
+        {isMainData &&
+          isMainData.map((data) => (
+            <ItemCard
+              itemId={data.id}
+              key={data.id}
+              imgSrc={data.imgSrc}
+              ratings={data.ratings}
+              name={data.name}
+              price={data.price}
+            />
+          ))}
       </div>
     </div>
   );

@@ -1,12 +1,18 @@
-import {
-  SearchRounded,
-  ShoppingCartRounded,
-  BarChart,
-} from "@mui/icons-material";
+import { SearchRounded, ShoppingCartRounded } from "@mui/icons-material";
 import "./header.css";
 import LogoImg from "../../assets/corne.jpg";
 import LogoText from "../../assets/corne1.jpg";
-const Header = () => {
+//import { useEffect } from "react";
+
+const Header = ({ showSideNavbar }) => {
+  //add a active class in another component with useEffect
+  //useEffect(() => {
+  //  const toggleToCart = document.querySelector(".shoppingCart");
+  // toggleToCart.addEventListener("click", () => {
+  //   document.querySelector(".rightMenu").classList.toggle("active");
+  // });
+  // }, []);
+
   return (
     <header>
       <div className="logoImage">
@@ -17,7 +23,7 @@ const Header = () => {
         <SearchRounded className="searchIcon" />
         <input type="text" placeholder="Rechercher"></input>
       </div>
-      <div className="shoppingCart">
+      <div className="shoppingCart" onClick={showSideNavbar}>
         <ShoppingCartRounded className="cart" />
         <div className="cartContent">
           <p>2</p>
@@ -32,9 +38,6 @@ const Header = () => {
           />
           <h2 className="username">Mouhamed</h2>
         </div>
-      </div>
-      <div className="toggleMenu">
-        <BarChart className="toggleIcon" />
       </div>
     </header>
   );

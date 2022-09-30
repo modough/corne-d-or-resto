@@ -1,0 +1,69 @@
+.inCart {
+  display: flex;
+  align-items: center;
+  margin: 8px 0;
+}
+.inCart .cartImgBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  border-radius: 10px;
+  background: var(--lightgreen);
+  width: 60px;
+  min-width: 60px;
+  height: 60px;
+  min-height: 60px;
+}
+
+.inCart .cartImgBox img {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+.inCart .cartSection {
+  margin-left: 10px;
+}
+.inCart .cartSection .sectionName {
+  color: var(--black);
+  font-size: 16px;
+}
+.inCart .cartSection .sectionQty {
+  font-size: 16px;
+  color: var(--black);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 120px;
+}
+.inCart .cartSection .sectionQty .qty {
+  color: var(--goldenrod);
+}
+.inCart .cartSection .sectionQty .qtyToggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 60px;
+  cursor: pointer;
+}
+.removeQty,
+.addQty {
+  font-size: 24px;
+  color: var(--black);
+}
+.inCart .cartPrice {
+  display: flex;
+  margin-left: auto;
+
+  font-weight: 600;
+  font-size: 16px;
+}
+.inCart .cartPrice .price {
+  font-size: 16px;
+  color: var(--grey);
+}
+.inCart .cartPrice .currency {
+  font-size: 12px;
+  color: var(--goldenrod);
+  margin-left: 2px;
+}

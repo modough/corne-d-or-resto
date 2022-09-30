@@ -17,14 +17,146 @@ main {
   background: url("../../assets/images (1).jpg") no-repeat center;
   background-size: cover;
   position: relative;
+  overflow: hidden;
   padding: 0 10px;
   display: flex;
   align-items: center;
   justify-content: space-around;
+}
+.mainContainerBanner .bannerStyle {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: transparent;
+  top: -200px;
+  right: 200px;
+  box-sizing: border-box;
+  border-radius: 100vw;
+  border: 50px solid rgba(0, 0, 0, 0.1);
+}
+.mainContainerBanner .bannerStyle::after {
+  position: absolute;
+  content: "";
+  width: 500px;
+  height: 500px;
+  background: transparent;
+  top: 185px;
+  right: -155px;
+  box-sizing: border-box;
+  border-radius: 100vw;
+  border: 50px solid rgba(0, 0, 0, 0.1);
 }
 .deliveryPicture {
   position: relative;
   right: 0;
   bottom: 0;
   width: 235px;
+}
+
+.rightMenu {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 350px;
+  height: calc(100% - 70px);
+  position: fixed;
+  top: 70px;
+  right: 0;
+  z-index: 105;
+  transform: translateX(200%);
+  padding: 20px 10px;
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: var(--box-shadowBanner);
+  background: var(--white);
+}
+.rightMenu.active {
+  transform: translateX(0%);
+}
+.debitCardContainer {
+  padding: 10px;
+  width: 100%;
+  height: auto;
+}
+.debitCard {
+  position: relative;
+  width: 100%;
+  height: 170px;
+  min-width: 300px;
+  min-height: 170px;
+}
+.debitCard::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: var(--goldenrod);
+  filter: blur(2px);
+  z-index: -2;
+  border-radius: 15px;
+  rotate: 5deg;
+}
+.debitCard::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: linear-gradient(
+    35deg,
+    rgba(255, 255, 255, 0.3),
+    rgba(255, 255, 255, 0.1)
+  );
+  backdrop-filter: blur(10px);
+  z-index: -1;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 15px;
+}
+
+.checkoutCartContainer {
+  margin-top: 10px;
+  min-height: 280px;
+  max-height: 300px;
+  width: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.checkoutCartContainer::-webkit-scrollbar {
+  display: none;
+}
+
+.checkoutHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.checkoutHeader h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #2a2b3c;
+}
+.checkoutHeader .viewAll p {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--goldenrod);
+}
+.checkoutHeader .viewAll i {
+  display: flex;
+  background: var(--goldenrod);
+  width: 20px;
+  height: 20px;
+  min-width: 20px;
+  border-radius: 5px;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+}
+.checkoutHeader .viewAll i .MuiSvgIcon-root {
+  font-size: 16px;
+  color: #faf9fb;
 }

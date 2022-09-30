@@ -6,6 +6,9 @@
   --backgroundWhite: #faf9fb;
   --boxShadow: 0 0 20px rgba(0, 0, 0, 0.15);
   --box-shadowBanner: 0 5px 20px rgba(0, 0, 0, 1);
+  --grey: #373848;
+  --lightgreen: #00ffc855;
+  --black: #2a2b3c;
 }
 
 * {
